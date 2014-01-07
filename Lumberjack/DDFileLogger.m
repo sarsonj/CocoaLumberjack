@@ -485,7 +485,7 @@ BOOL doesAppRunInBackground(void);
 
     dispatch_once(&onceToken, ^{
     #if TARGET_OS_IPHONE
-        _appName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
+        _appName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"];
 
         if (! _appName)
         {
